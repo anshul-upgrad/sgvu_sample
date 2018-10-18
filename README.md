@@ -16,7 +16,7 @@ Problem Statement
 Solution Highlights
 ----------------------------------
 
-1. Created a multi-tier architecture by separating tests, page objects and utilities. Created an initialization package to connect between all
+1. Created a multi-tier architecture by separating tests, page objects and utilities. Created an initialization package to create a relation  between all entities
 2. Used Page Factory approach at the framework level - object of a PO would be created only when it is to be used
 3. Added resources folder to keep all important files other than source code intact and together
 4. Configured data file for making scripts data-driven
@@ -28,7 +28,7 @@ Solution Highlights
 Benefits of the framework
 ----------------------------------
 
-1. Single point of configuration and test data -> All config params(like execution platform, base URLs etc and test data are passed through a single config file)
+1. Single point of configuration and test data -> All config params(like execution platform, base URLs etc and test data) are passed through a single config file
 2. Capability of test execution on local as well as cloud infra
 3. Highly maintainable code due to use of Page Objects and modular approach
 4. Single command execution for entire test suite, readily integrable to any CI tool(like Jenkins etc)
