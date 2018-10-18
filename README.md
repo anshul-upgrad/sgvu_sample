@@ -4,18 +4,18 @@ About the codebase:
 ---------------------------------
 *This is a test project for testing a few scenarios on a sample flight/hotel booking website. There are **3 tests** in total spread over 3 test classes. Following tech stack has been used to develop the same.*
 
-**Tech Stack:** *Java*  *Selenium* *TestNG*  *Gradle/Maven*
+**Tech Stack:** *Java*, *Selenium*, *TestNG*,  *Maven*, *Allure*, 
 
 Problem Statement
 ----------------------------------
-**Tasks:**
 
 1. Create a framework that caters to automated test execution on cloud infrastructure
-2. Generate rich text test reports
+2. Generate interactive test reports
 3. Configure tests to be dynamic, data driven and modular
 
+Solution Highlights
+----------------------------------
 
-**How is the problem solved:**
 1. Created a multi-tier architecture by separating tests, page objects and utilities. Created an initialization package to connect between all
 2. Used Page Factory approach at the framework level - object of a PO would be created only when it is to be used
 3. Added resources folder to keep all important files other than source code intact and together
@@ -25,8 +25,8 @@ Problem Statement
 7. Applied Reusability - created BasePage PO having all common methods to be used across all other POs, explicit wait also added in a single utility class used across all POs
 8. Applied Maintainability - Code is structured into different packages with loggers and relevant method names making it easier for debugging in the longer run
 
-
-**BENEFITS of the FRAMEWORK as compared to others** :
+Benefits of the framework
+----------------------------------
 
 1. Single point of configuration and test data -> All config params(like execution platform, base URLs etc and test data are passed through a single config file)
 2. Capability of test execution on local as well as cloud infra
@@ -35,13 +35,18 @@ Problem Statement
 5. Integrated allure reporting which creates highly understandable and rich web reports
 
 
+Execution pre-requisites
+----------------------------------
 
-**EXECUTION PRE-REQUISITES** :
-1. Java
-2. Maven
+1. Install Java
+2. Install Maven
 3. Only for local execution, you'd need chromedriver executable as well 
 
-**EXECUTION COMMAND** :
 
-mvn clean verify 
+Execution command
+----------------------------------
+
+mvn clean verify allure:serve
+
+Post execution, reports will be auto-launched on local browser instance.
 
